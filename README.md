@@ -28,7 +28,7 @@ const businessTool = require('@lianhr12/business-tools');
 const os = businessTool.getOSInfo();
 ```
 
-浏览器，需要下载dist目录下的index.umd.js文件，并页面引用
+浏览器，需要下载dist目录下的business-tools.umd.js文件，并页面引用
 ```html
 <script src="business-tools.umd.js"></script>
 <script>
