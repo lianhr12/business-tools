@@ -16,14 +16,14 @@ yarn add @lianhr12/business-tools -S
 根据模块使用工具库，下面简单举例：
 ES Module
 ```javascript
-import businessTool from 'business-tools';
+import businessTool from '@lianhr12/business-tools';
 // 获取系统信息
 const os = businessTool.getOSInfo();
 ```
 
 CommonJS
 ```javascript
-const businessTool = require('business-tools');
+const businessTool = require('@lianhr12/business-tools');
 // 获取系统信息
 const os = businessTool.getOSInfo();
 ```
@@ -39,7 +39,7 @@ const os = businessTool.getOSInfo();
 **推荐使用方法**  
 ```javascript
 // 为减少文件体积，推荐按需引入使用到方法
-import { getOSInfo } from 'business-tools';
+import { getOSInfo } from '@lianhr12/business-tools';
 // 获取系统信息
 const os = getOSInfo();
 ```
