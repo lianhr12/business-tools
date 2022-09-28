@@ -1,10 +1,16 @@
 # business-tools
+[![npm](https://img.shields.io/npm/v/@lianhr12/business-tools.svg)](https://www.npmjs.com/package/@lianhr12/business-tools)
+[![LICENSE MIT](https://img.shields.io/npm/l/@lianhr12/business-tools.svg)](https://www.npmjs.com/package/@lianhr12/business-tools) 
+
 > 业务开发常用工具方法封装集合，业务开发过程中，会经常用到`日期格式化`、`url参数转对象`、`浏览器类型判断`、`节流函数`等常用函数，为避免不同项目多次复制粘贴的麻烦，这里统一封装，并发布到npm，以提高开发效率。
+
+`注意：工具库依赖于浏览器运行环境，不可直接使用到nodejs环境，否则部分方法会直接报错`
 
 ## 安装使用
 使用npm或者yarn快速安装
 ```
-npm install business-tools -S
+npm install @lianhr12/business-tools -S
+yarn add @lianhr12/business-tools -S
 ```
 
 根据模块使用工具库，下面简单举例：
