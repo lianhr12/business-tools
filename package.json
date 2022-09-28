@@ -1,0 +1,29 @@
+{
+  "name": "business-tool",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Business development common tools and methods encapsulation collection",
+  "main": "dist/index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lianhr12/business-tool.git"
+  },
+  "keywords": [
+    "tools",
+    "business"
+  ],
+  "author": "Rope (lhr9311@163.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lianhr12/business-tool/issues"
+  },
+  "homepage": "https://github.com/lianhr12/business-tool#readme",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^5.5.2"
+  }
+}
