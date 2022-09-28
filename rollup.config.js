@@ -7,9 +7,9 @@ export default [
   {
     input: "lib/index.ts",
     output: {
-      file: "dist/index.umd.js",
+      file: "dist/business-tool.umd.js",
       format: "umd",
-      name: 'Baseutils'
+      name: 'businessTool'
     },
     plugins: [
       typescript(),
