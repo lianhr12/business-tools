@@ -7,7 +7,7 @@ export default [
   {
     input: "lib/index.ts",
     output: {
-      file: "dist/business-tool.umd.js",
+      file: "dist/business-tools.umd.js",
       format: "umd",
       name: 'businessTool'
     },

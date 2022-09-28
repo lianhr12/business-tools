@@ -1,30 +1,30 @@
-# business-tool
+# business-tools
 > 业务开发常用工具方法封装集合，业务开发过程中，会经常用到`日期格式化`、`url参数转对象`、`浏览器类型判断`、`节流函数`等常用函数，为避免不同项目多次复制粘贴的麻烦，这里统一封装，并发布到npm，以提高开发效率。
 
 ## 安装使用
 使用npm或者yarn快速安装
 ```
-npm install business-tool -S
+npm install business-tools -S
 ```
 
 根据模块使用工具库，下面简单举例：
 ES Module
 ```javascript
-import businessTool from 'business-tool';
+import businessTool from 'business-tools';
 // 获取系统信息
 const os = businessTool.getOSInfo();
 ```
 
 CommonJS
 ```javascript
-const businessTool = require('business-tool');
+const businessTool = require('business-tools');
 // 获取系统信息
 const os = businessTool.getOSInfo();
 ```
 
 浏览器，需要下载dist目录下的index.umd.js文件，并页面引用
 ```html
-<script src="business-tool.umd.js"></script>
+<script src="business-tools.umd.js"></script>
 <script>
     var OS = businessTool.getOSInfo();
 </script>
@@ -33,7 +33,7 @@ const os = businessTool.getOSInfo();
 **推荐使用方法**  
 ```javascript
 // 为减少文件体积，推荐按需引入使用到方法
-import { getOSInfo } from 'business-tool';
+import { getOSInfo } from 'business-tools';
 // 获取系统信息
 const os = getOSInfo();
 ```

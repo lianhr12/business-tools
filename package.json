@@ -1,5 +1,5 @@
 {
-  "name": "business-tool",
+  "name": "business-tools",
   "version": "1.0.0",
   "description": "Business development common tools and methods encapsulation collection",
   "main": "dist/index.cjs.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lianhr12/business-tool.git"
+    "url": "git+https://github.com/lianhr12/business-tools.git"
   },
   "keywords": [
     "tools",
@@ -19,9 +19,9 @@
   "author": "Rope (lhr9311@163.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lianhr12/business-tool/issues"
+    "url": "https://github.com/lianhr12/business-tools/issues"
   },
-  "homepage": "https://github.com/lianhr12/business-tool#readme",
+  "homepage": "https://github.com/lianhr12/business-tools#readme",
   "devDependencies": {
     "rollup": "^2.79.1",
     "rollup-plugin-dts": "^4.2.2",
