@@ -148,6 +148,18 @@ declare function isUrl(str: string): boolean;
  * @return {String}
  */
 declare function digitUppercase(n: number): string;
+/**
+ * 保护手机号码隐私，隐蔽中间四位数
+ * @param phone {String}
+ * @returns {String} 结果如：138****8888
+ */
+declare function replacePhoneNum(phone: string): string;
+/**
+ * 去除首尾空格处理，trim('   test    ')
+ * @param str {String} 文本内容
+ * @returns {String} 处理后的结果
+ */
+declare function trim(str: string): string;
 
 /**
  *
@@ -215,4 +227,4 @@ declare function parseQueryString(url?: string): {};
  */
 declare function stringfyQueryString(obj: any): string;
 
-export { addClass, deepClone, digitUppercase, formatPassTime, formatRemainTime, getBrowserInfo, getCookieByName, getKeyName, getOSInfo, getScrollTop, hasClass, hasSupportWebP, isColor, isEmail, isEmptyObject, isIdCard, isLeapYear, isPhoneNum, isSameDay, isUrl, monthDays, parseQueryString, randomColor, randomNum, removeClass, removeCookiesByName, requestAnimFrame, scrollTo, setCookie, setScrollTop, stringfyQueryString, timeLeft };
+export { addClass, deepClone, digitUppercase, formatPassTime, formatRemainTime, getBrowserInfo, getCookieByName, getKeyName, getOSInfo, getScrollTop, hasClass, hasSupportWebP, isColor, isEmail, isEmptyObject, isIdCard, isLeapYear, isPhoneNum, isSameDay, isUrl, monthDays, parseQueryString, randomColor, randomNum, removeClass, removeCookiesByName, replacePhoneNum, requestAnimFrame, scrollTo, setCookie, setScrollTop, stringfyQueryString, timeLeft, trim };

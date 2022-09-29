@@ -444,6 +444,23 @@ function digitUppercase(n) {
         .replace(/(零.)+/g, '零')
         .replace(/^整$/, '零元整');
 }
+/**
+ * 保护手机号码隐私，隐蔽中间四位数
+ * @param phone {String}
+ * @returns {String} 结果如：138****8888
+ */
+function replacePhoneNum(phone) {
+    phone = phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
+    return phone;
+}
+/**
+ * 去除首尾空格处理，trim('   test    ')
+ * @param str {String} 文本内容
+ * @returns {String} 处理后的结果
+ */
+function trim(str) {
+    return str.replace(/(^\s*)|(\s*$)/g, '');
+}
 
 /**
  *
@@ -620,4 +637,4 @@ function stringfyQueryString(obj) {
     return pairs.join('&');
 }
 
-export { addClass, deepClone, digitUppercase, formatPassTime, formatRemainTime, getBrowserInfo, getCookieByName, getKeyName, getOSInfo, getScrollTop, hasClass, hasSupportWebP, isColor, isEmail, isEmptyObject, isIdCard, isLeapYear, isPhoneNum, isSameDay, isUrl, monthDays, parseQueryString, randomColor, randomNum, removeClass, removeCookiesByName, requestAnimFrame, scrollTo, setCookie, setScrollTop, stringfyQueryString, timeLeft };
+export { addClass, deepClone, digitUppercase, formatPassTime, formatRemainTime, getBrowserInfo, getCookieByName, getKeyName, getOSInfo, getScrollTop, hasClass, hasSupportWebP, isColor, isEmail, isEmptyObject, isIdCard, isLeapYear, isPhoneNum, isSameDay, isUrl, monthDays, parseQueryString, randomColor, randomNum, removeClass, removeCookiesByName, replacePhoneNum, requestAnimFrame, scrollTo, setCookie, setScrollTop, stringfyQueryString, timeLeft, trim };

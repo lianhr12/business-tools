@@ -448,6 +448,23 @@ function digitUppercase(n) {
         .replace(/(零.)+/g, '零')
         .replace(/^整$/, '零元整');
 }
+/**
+ * 保护手机号码隐私，隐蔽中间四位数
+ * @param phone {String}
+ * @returns {String} 结果如：138****8888
+ */
+function replacePhoneNum(phone) {
+    phone = phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
+    return phone;
+}
+/**
+ * 去除首尾空格处理，trim('   test    ')
+ * @param str {String} 文本内容
+ * @returns {String} 处理后的结果
+ */
+function trim(str) {
+    return str.replace(/(^\s*)|(\s*$)/g, '');
+}
 
 /**
  *
@@ -650,9 +667,11 @@ exports.randomColor = randomColor;
 exports.randomNum = randomNum;
 exports.removeClass = removeClass;
 exports.removeCookiesByName = removeCookiesByName;
+exports.replacePhoneNum = replacePhoneNum;
 exports.requestAnimFrame = requestAnimFrame;
 exports.scrollTo = scrollTo;
 exports.setCookie = setCookie;
 exports.setScrollTop = setScrollTop;
 exports.stringfyQueryString = stringfyQueryString;
 exports.timeLeft = timeLeft;
+exports.trim = trim;
