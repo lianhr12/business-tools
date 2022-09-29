@@ -16,8 +16,8 @@ export default [
       uglify()
     ]
   },
-   // 编译TS文件为CJS模块标准
-   {
+  // 编译TS文件为CJS模块标准
+  {
     input: "lib/index.ts",
     output: {
       file: "dist/index.cjs.js",
