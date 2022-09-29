@@ -83,6 +83,8 @@ const os = getOSInfo();
 
 ### String
 - 现金额转大写 &emsp;&emsp; digitUppercase(n: number): string;
+- 手机号隐私处理（中间四位数隐藏）&emsp;&emsp; function replacePhoneNum(phone: string): string;
+- 去除首尾空格处理，trim('   test    ')&emsp;&emsp; function trim(str: string): string;
 
 ### Support
 - 判断浏览器是否支持webP格式图片&emsp;&emsp;function hasSupportWebP(): boolean;
