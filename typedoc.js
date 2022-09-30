@@ -8,7 +8,7 @@ module.exports = {
     "./lib/index.ts"
   ],
   includes: ["lib/*.ts"], // 指定一个目录，其中包含可以在文档注释中使用[[include:file.md]]插入到生成文档中的文件。
-  out: "doc", // 输出到文件夹
+  out: "docs", // 输出到文件夹
   name: "business-tools",
   readme: "none", // 是否在index页面展示README文件，该属性值设置为 none 时，index页面直接显示API文档内容。
 }

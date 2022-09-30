@@ -8,7 +8,7 @@
     "dev": "rimraf dist && rollup -c -w",
     "build": "rimraf dist && rollup -c",
     "changelog": "standard-version",
-    "doc": "rimraf doc && typedoc --tsconfig tsconfig.json --options typedoc.js"
+    "docs": "rimraf docs && typedoc --tsconfig tsconfig.json --options typedoc.js"
   },
   "repository": {
     "type": "git",
