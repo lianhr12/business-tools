@@ -45,7 +45,7 @@ const os = getOSInfo();
 ```
 
 ## API文档
-
+详细API文档内容，请查阅[这里](https://docs.hrope.cn/)
 ### Cookie 
 - 根据name读取Cookie &emsp;&emsp; function getCookieByName(name: string): string; 
 - 根据name删除Cookie &emsp;&emsp;removeCookiesByName(name: string): void;
