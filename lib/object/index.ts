@@ -1,7 +1,8 @@
 /**
+ * @category Object
  * @desc   判断`obj`是否为空
- * @param  {Object} obj
- * @return {Boolean}
+ * @param obj 对象|数组
+ * @return boolean 值
  */
 export function isEmptyObject(obj) {
   if (!obj || typeof obj !== 'object' || Array.isArray(obj))
@@ -10,6 +11,7 @@ export function isEmptyObject(obj) {
 }
 
 /**
+ * @category Object
  * @desc 深拷贝，支持常见类型
  * @param {Any} values
  * @return {Any}

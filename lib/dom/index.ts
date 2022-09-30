@@ -1,8 +1,9 @@
 
 /**
  * 判断元素是否包含指定class
- * @param el {HTMLElement} 目标元素
- * @param className {String} 指定className 
+ * @category DOM
+ * @param el 目标元素
+ * @param className 指定className 
  * @returns boolean
  */
 export function hasClass(el: Element, className: string): boolean {
@@ -11,8 +12,9 @@ export function hasClass(el: Element, className: string): boolean {
 
 /**
  * 为元素添加class
- * @param el {HTMLElement} 目标元素
- * @param className {String} 指定className 
+ * @category DOM
+ * @param el 目标元素
+ * @param className 指定className 
  */
 export function addClass(el: Element, className: string) {
   if (!hasClass(el, className)) {
@@ -22,8 +24,9 @@ export function addClass(el: Element, className: string) {
 
 /**
  * 删除元素指定的className
- * @param el {HTMLElement} 目标元素
- * @param className {String} 指定className
+ * @category DOM
+ * @param el 目标元素
+ * @param className 指定className
  */
 export function removeClass(el: Element, className: string) {
   if (hasClass(el, className)) {
@@ -33,6 +36,7 @@ export function removeClass(el: Element, className: string) {
 }
 
 /**
+ * @category DOM
  * @desc 获取滚动条距顶部的距离
  */
 export function getScrollTop(): number {
@@ -41,16 +45,19 @@ export function getScrollTop(): number {
 
 
 /**
- * 
+ * @category DOM
  * @desc 设置滚动条距顶部的距离
- * @param {Number} value
+ * @param value 距离顶部距离
  */
-export function setScrollTop(value): number {
+export function setScrollTop(value: number): number {
   window.scrollTo(0, value);
   return value;
 }
 
-
+/**
+ * 包装&兼容requestAnimationFrame方法
+ * @category DOM
+ */
 export const requestAnimFrame = (function () {
   return window.requestAnimationFrame ||
     function (callback) {
@@ -59,10 +66,10 @@ export const requestAnimFrame = (function () {
 })();
 
 /**
- * 
- * @desc  在${duration}时间内，滚动条平滑滚动到${to}指定位置
- * @param {Number} to 滚动到什么距离
- * @param {Number} duration 动画持续多久完成
+ * @category DOM
+ * @desc  在\$\{duration\}时间内，滚动条平滑滚动到\$\{to\}指定位置
+ * @param to 滚动到什么距离
+ * @param duration 动画持续多久完成
  */
 export function scrollTo(to: number, duration: number): void {
   if (duration < 0) {

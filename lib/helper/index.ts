@@ -109,11 +109,12 @@ const keyCodeMap = {
 };
 
 /**
+* @category Helpers
 * @desc 根据keycode获得键名
-* @param  {Number} keycode 
-* @return {String}
+* @param keycode 按钮的keyCode
+* @return 按键名称
 */
-export function getKeyName(keycode) {
+export function getKeyName(keycode: number): string {
   if (keyCodeMap[keycode]) {
     return keyCodeMap[keycode];
   } else {

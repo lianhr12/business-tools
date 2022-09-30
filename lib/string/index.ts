@@ -1,7 +1,8 @@
 /**
+ * @category String
  * @desc   现金额转大写
- * @param  {Number} n 
- * @return {String}
+ * @param n 金额数值
+ * @return 金额转换为中文显示： 壹元贰角
  */
 export function digitUppercase(n: number): string {
     const fraction = ['角', '分'];
@@ -37,8 +38,9 @@ export function digitUppercase(n: number): string {
 
 /**
  * 保护手机号码隐私，隐蔽中间四位数
- * @param phone {String}
- * @returns {String} 结果如：138****8888
+ * @param phone 手机号码
+ * @returns 结果如：138****8888
+ * @category String
  */
 export function replacePhoneNum(phone: string): string {
     phone = phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
@@ -46,9 +48,11 @@ export function replacePhoneNum(phone: string): string {
 }
 
 /**
- * 去除首尾空格处理，trim('   test    ')
- * @param str {String} 文本内容
- * @returns {String} 处理后的结果
+ * 去除首尾空格处理
+ * @param str 文本内容
+ * @returns 处理后的结果
+ * @example trim('   test    ')
+ * @category String
  */
 export function trim(str: string): string {
     return str.replace(/(^\s*)|(\s*$)/g, '');

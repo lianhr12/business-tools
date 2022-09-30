@@ -1,14 +1,12 @@
-interface IBrowserInfo {
+export interface IBrowserInfo {
   name: string; // 浏览器名称
   version: string; // 浏览器版本
 }
 
 /**
  * 根据UA信息获取浏览器信息
- * @returns {
- *  name: string; // 浏览器
- *  version: string; // 浏览器版本
- * }
+ * @category Device
+ * @returns \{ name: "浏览器名称", version: "1.0" \}
  */
 export function getBrowserInfo(): IBrowserInfo {
   const browserInfo = {} as IBrowserInfo;
@@ -58,7 +56,8 @@ export function getBrowserInfo(): IBrowserInfo {
 
 /**
  * 获取操作系统类型
- * @returns 
+ * @category Device
+ * @returns 系统信息：ios | android | windowsphone | macos | windows | linux
  */
 export function getOSInfo(): string{
   const userAgent = 'navigator' in window && 'userAgent' in navigator && navigator.userAgent.toLowerCase() || '';

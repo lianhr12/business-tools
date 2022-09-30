@@ -1,7 +1,8 @@
 /**
- * @desc   格式化${startTime}距现在的已过时间
- * @param  {Date} startTime 
- * @return {String}
+ * @category Time
+ * @desc   格式化\$\{startTime\}距现在的已过时间
+ * @param startTime 时间戳
+ * @return x年前 | x个月前 | x天前 | x小时前 | x分钟前 | 刚刚
  */
 export function formatPassTime(startTime: number): string {
   const currentTime = new Date().getTime();
@@ -22,10 +23,10 @@ export function formatPassTime(startTime: number): string {
 }
 
 /**
- * 
- * @desc   格式化现在距${endTime}的剩余时间
- * @param  {Date} endTime  
- * @return {String}
+ * @category Time
+ * @desc   格式化现在距\$\{endTime\}的剩余时间
+ * @param endTime 时间戳 
+ * @return x天x小时x分钟x秒
  */
 export function formatRemainTime(endTime: number): string {
   const startDate = new Date(); //开始时间
@@ -46,10 +47,10 @@ export function formatRemainTime(endTime: number): string {
 }
 
 /**
- * 
+ * @category Time
  * @desc 是否为闰年
- * @param {Number} year
- * @returns {Boolean}
+ * @param year 输入指定年
+ * @returns Boolean值
  */
 export function isLeapYear(year: number): boolean {
   if (0 === year % 4 && (year % 100 !== 0 || year % 400 === 0)) {
@@ -60,10 +61,11 @@ export function isLeapYear(year: number): boolean {
 
 
 /**
+ * @category Time
  * @desc   判断是否为同一天
- * @param  {Date} date1 
- * @param  {Date} date2 可选／默认值：当天
- * @return {Boolean}
+ * @param  date1 
+ * @param  date2 可选／默认值：当天
+ * @return Boolean值
  */
 export function isSameDay(date1: Date, date2?: Date) {
   if (!date2) {
@@ -81,9 +83,10 @@ export function isSameDay(date1: Date, date2?: Date) {
 }
 
 /** 
+ * @category Time
  * @desc 获取指定日期月份的总天数
- * @param {Date} time
- * @return {Number}
+ * @param time
+ * @return 指定日期月份的总天数
 */
 export function monthDays(time: Date): number {
   time = new Date(time);
@@ -93,10 +96,11 @@ export function monthDays(time: Date): number {
 }
 
 /**
- * @desc ${startTime - endTime}的剩余时间,startTime大于endTime时，均返回0
- * @param { Date | String } startTime
- * @param { Date | String } endTime
- * @returns { Object } { d, h, m, s } 天 时 分 秒
+ * @category Time
+ * @desc \$\{startTime - endTime\}的剩余时间,startTime大于endTime时，均返回0
+ * @param startTime
+ * @param endTime
+ * @returns \{ d, h, m, s \} 天 时 分 秒
  */
 export function timeLeft(startTime: Date|string, endTime: Date|string): {
   d: number,

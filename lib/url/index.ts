@@ -1,7 +1,8 @@
 /**
  *  url参数转对象
- * @param  {String} url URL地址，默认值: window.location.href
- * @return {Object} 
+ * @category URL
+ * @param url URL地址，默认值: window.location.href
+ * @return 对象结果
  */
  export function parseQueryString(url=window.location.href) {
   if(url.indexOf('?') === -1) {
@@ -22,8 +23,9 @@
 
 /**
  * 对象序列化
- * @param  {Object} obj 
- * @return {String}
+ * @category URL
+ * @param obj 对象值 
+ * @return a=1&b=2...
  */
 export function stringfyQueryString(obj):string {
   if (!obj) return '';
